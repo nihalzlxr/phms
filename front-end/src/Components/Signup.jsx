@@ -20,7 +20,7 @@ function Signup() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const signupdata= await axios.post("http://localhost:8000/register",signup)
+    const signupdata= await axios.post(`${import.meta.env.BACKEND_URL}register`,signup)
     console.log(signupdata.data);
     alert("Account created successfully! Please log in.");
     navigate("/");

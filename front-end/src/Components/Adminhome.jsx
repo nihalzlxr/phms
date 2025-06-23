@@ -17,7 +17,7 @@ function Adminhome() {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get("http://localhost:8000/foodlist")
+      .get(`${import.meta.env.BACKEND_URL}/foodlist`)
       .then((response) => {
         setFood(response.data);
         calculateMealCounts(response.data);

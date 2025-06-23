@@ -14,7 +14,7 @@ function Studentsmenu() {
   
   const handlesubmit =(e)=>{
     e.preventDefault();
-    axios.post("http://localhost:8000/order", 
+    axios.post(`${import.meta.env.BACKEND_URL}/order`, 
       {studentname : user.studentname,
         food :selectedMealNames
       }
